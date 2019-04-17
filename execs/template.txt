@@ -1,0 +1,29 @@
+//principais
+const Discord = require('discord.js')
+const fs = require('fs')
+const config = require("../config.json")
+
+//database
+const mongoose = require("mongoose")
+mongoose.connect('mongodb://maycon190:+m97466833@ds135714.mlab.com:35714/dark_bot', {
+    useNewUrlParser: true
+})
+
+const db_config = require("../models/config.js")
+const staff_list = require("../models/staff-list.js")
+const regras = require("../models/regras.js")
+const mute = require("../models/mute.js")
+
+
+const color = require('cli-color')
+
+const logger = require("../models/logger.js")
+const moment = require('moment')
+moment.locale('pt-BR')
+
+exports.run = (client, ochannel, nchannel) => {
+}
+
+module.exports.help = {
+    name: 'CHANNEL_UPDATE'
+}
